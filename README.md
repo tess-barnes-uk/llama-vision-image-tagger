@@ -49,12 +49,20 @@ This project has an accompanying blog post [here](https://medium.com/design-boot
     ollama pull llama3.2-vision # For 11B model
     ```
 
+4. **Use an alternative model:**
+
+    Ensure that ollama server is started and you have pulled the model you want to use.
+    ```bash
+    ollama pull minicpm-v4.6 # for a light weight Mini LLM focused on image understanding
+    ```
+    Replace the value for `MODEL_NAME` in the config.env file
+
 ## Usage
 
 1. **Run the FastAPI backend:**
 
     ```bash
-    uvicorn main:app --host 127.0.0.1 --port 8000
+    uvicorn main:app --host 127.0.0.1 --port 8000 --env-file config.env
     ```
 
     This will start the server on `http://127.0.0.1:8000`.
