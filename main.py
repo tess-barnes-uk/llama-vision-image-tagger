@@ -15,7 +15,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    model_name: str = "minicpm-v4.6"
+    model_name: str = "llama3.2-vision"
 
 
 settings = Settings()
